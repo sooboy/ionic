@@ -1,0 +1,31 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * @hidden
+ */
+class QueryParams {
+    constructor() {
+        this.data = {};
+    }
+    parseUrl(url) {
+        if (url) {
+            var startIndex = url.indexOf('?');
+            if (startIndex > -1) {
+                var queries = url.slice(startIndex + 1).split('&');
+                for (var i = 0; i < queries.length; i++) {
+                    if (queries[i].indexOf('=') > 0) {
+                        var split = queries[i].split('=');
+                        if (split.length > 1) {
+                            this.data[split[0].toLowerCase()] = split[1].split('#')[0];
+                        }
+                    }
+                }
+            }
+        }
+    }
+    get(key) {
+        return this.data[key.toLowerCase()];
+    }
+}
+exports.QueryParams = QueryParams;
+//# sourceMappingURL=query-params.js.map

@@ -1,0 +1,28 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const core_1 = require("@angular/core");
+const __1 = require("../../../../../..");
+const tab_three_1 = require("./tab-three");
+let Tab3Module = class Tab3Module {
+};
+Tab3Module = __decorate([
+    core_1.NgModule({
+        imports: [
+            __1.IonicPageModule.forChild(tab_three_1.Tab3)
+        ],
+        declarations: [
+            tab_three_1.Tab3
+        ],
+        entryComponents: [
+            tab_three_1.Tab3,
+        ]
+    })
+], Tab3Module);
+exports.Tab3Module = Tab3Module;
+//# sourceMappingURL=tab-three.module.js.map
